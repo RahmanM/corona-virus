@@ -13,7 +13,7 @@ class Countries extends Component {
   }
 
   componentDidMount() {
-    fetch("https://corona.lmao.ninja/countries")
+    fetch("https://corona.lmao.ninja/v2/countries")
       .then(res => res.json())
       .then(data => {
         this.setState({ countries: data });
