@@ -30,7 +30,14 @@ class Countries extends Component {
       return <Country key={country.name} coronaInfo={country} />;
     });
 
-    return <div className="wrapper">{countries}</div>;
+    return (
+
+      <div>
+        <input type="text" onChange={e => this.setState({filter: e.target.value})} />
+        <br/>
+        <div className="wrapper">{countries}</div>
+      </div>
+      );
   }
 }
 
